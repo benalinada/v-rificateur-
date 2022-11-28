@@ -1,0 +1,30 @@
+
+<h1 > liste des Produits</h1>
+<article class="table-header">
+    <div style="margin-top: 6%;">
+      
+    </div>
+    <div>
+       
+      <button class="button-add-row  btn-lg" mat-button (click)="refrech()" >
+        refrech
+      </button>
+    </div>
+  </article>
+  <table class="table">
+    <thead class="table-light">
+    <tr><th>Image</th><th>Nom Produit</th><th>Code à barre</th> <th>prix</th></tr>
+  </thead>
+  <tbody>
+    <tr *ngFor = "let obj of liste">
+      <td> <img src="data:image/png;base64,{{obj.image}}"
+        style="height: 50px;width: 50px;margin-top: 2px; margin-bottom: 2px;" /></td>
+      <td>{{obj.nom}}</td>
+      <td>{{obj.code_Barre}}</td>
+      <td>{{obj.prix_vente | number:'1.3-3'}}</td>
+  </tr>
+</tbody>
+</table>
+ 
+  
+  
